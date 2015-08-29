@@ -2,18 +2,18 @@
 ## Auto Generated makefile by CodeLite IDE
 ## any manual changes will be erased      
 ##
-## Debug
+## Release
 ProjectName            :=_SimpleTextUI
-ConfigurationName      :=Debug
+ConfigurationName      :=Release
 WorkspacePath          := "C:\Users\Akash\Documents\Programming\_codelite\c++"
 ProjectPath            := "C:\Users\Akash\Documents\Programming\_codelite\c++\_SimpleTextUI"
-IntermediateDirectory  :=./Debug
+IntermediateDirectory  :=./Release
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Akash
-Date                   :=26/08/2015
+Date                   :=29/08/2015
 CodeLitePath           :="C:\Program Files\CodeLite"
 LinkerName             :="C:/Program Files (x86)/LLVM/bin/clang++.exe"
 SharedObjectLinkerName :="C:/Program Files (x86)/LLVM/bin/clang++.exe" -shared -fPIC
@@ -52,8 +52,8 @@ LibPath                := $(LibraryPathSwitch).
 AR       := "C:/Program Files (x86)/LLVM/bin/llvm-ar.exe" rcu
 CXX      := "C:/Program Files (x86)/LLVM/bin/clang++.exe"
 CC       := "C:/Program Files (x86)/LLVM/bin/clang.exe"
-CXXFLAGS := -std=c++11 -g $(Preprocessors)
-CFLAGS   :=  -g $(Preprocessors)
+CXXFLAGS := -std=c++11  $(Preprocessors)
+CFLAGS   :=   $(Preprocessors)
 ASFLAGS  := 
 AS       := "C:/Program Files (x86)/LLVM/bin/as.exe"
 
@@ -79,15 +79,15 @@ $(OutputFile): $(Objects)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(AR) $(ArchiveOutputSwitch)$(OutputFile) @$(ObjectsFileList) $(ArLibs)
-	@$(MakeDirCommand) "C:\Users\Akash\Documents\Programming\_codelite\c++/.build-debug"
-	@echo rebuilt > "C:\Users\Akash\Documents\Programming\_codelite\c++/.build-debug/_SimpleTextUI"
+	@$(MakeDirCommand) "C:\Users\Akash\Documents\Programming\_codelite\c++/.build-release"
+	@echo rebuilt > "C:\Users\Akash\Documents\Programming\_codelite\c++/.build-release/_SimpleTextUI"
 
 MakeIntermediateDirs:
-	@$(MakeDirCommand) "./Debug"
+	@$(MakeDirCommand) "./Release"
 
 
-./Debug:
-	@$(MakeDirCommand) "./Debug"
+./Release:
+	@$(MakeDirCommand) "./Release"
 
 PreBuild:
 
@@ -133,6 +133,6 @@ $(IntermediateDirectory)/src_Menu.cpp$(PreprocessSuffix): src/Menu.cpp
 ## Clean
 ##
 clean:
-	$(RM) -r ./Debug/
+	$(RM) -r ./Release/
 
 

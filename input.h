@@ -23,16 +23,21 @@ namespace SimpleTextUI {
 		std::string message,
 		std::function<bool(T)> isValid=[](T){ return true; }
 	) {
-		T obj;
 
-		do {
-			io << message;
-			io >> obj;
-			ignoreInputToNewline(io);
-		} while (!isValid(obj));
+        T obj;
+        bool failed {false};
+        
+        do {
+            io << message;
+            try { 
+                io >> obj;
+                failed = false;
+            } catch (InputFailedError) { failed = true; }
+            ignoreInputToNewline(io);
+        } while (failed || !isValid(obj));
 
-		return obj;
-	}
+        return obj;
+    }
 
 	bool yesOrNo(IOObj& io, std::string message);
 	bool yesOrNo(IOObj& io, std::string message, bool defaultVal);

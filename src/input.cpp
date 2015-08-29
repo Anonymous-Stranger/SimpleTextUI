@@ -10,6 +10,7 @@
 namespace SimpleTextUI {
 
 	void ignoreInputToNewline(std::istream& in) {
+        in.clear();
 		in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
 

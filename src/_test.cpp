@@ -13,7 +13,7 @@ void run() {
 
 	SimpleTextUI::Menu menu {{
 		{"blah", [](SimpleTextUI::IOObj& io){
-			io << (yesOrNo(io, "Are you sure?", false) ? "Good." : "Nevermind.");
+			io << (yesOrNo(io, "Are you sure?", false) ? "Good." : "Nevermind.") << std::endl;
 		}}
 	}};
 

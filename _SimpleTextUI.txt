@@ -1,1 +1,0 @@
-./Release/IOObj.cpp.o ./Release/src__test.cpp.o ./Release/src_input.cpp.o ./Release/src_Menu.cpp.o   

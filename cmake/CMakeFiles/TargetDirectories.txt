@@ -1,0 +1,1 @@
+/home/akash/Documents/programming/c++/_SimpleTextUI/cmake/CMakeFiles/SimpleTextUI.dir

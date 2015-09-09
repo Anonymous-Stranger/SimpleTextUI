@@ -1,0 +1,2 @@
+/usr/bin/ar cr /home/akash/Documents/programming/c++/_SimpleTextUI/bin/libSimpleTextUI.a  CMakeFiles/SimpleTextUI.dir/home/akash/Documents/programming/c++/_SimpleTextUI/src/_test.cpp.o CMakeFiles/SimpleTextUI.dir/home/akash/Documents/programming/c++/_SimpleTextUI/src/IOObj.cpp.o CMakeFiles/SimpleTextUI.dir/home/akash/Documents/programming/c++/_SimpleTextUI/src/input.cpp.o CMakeFiles/SimpleTextUI.dir/home/akash/Documents/programming/c++/_SimpleTextUI/src/Menu.cpp.o
+/usr/bin/ranlib /home/akash/Documents/programming/c++/_SimpleTextUI/bin/libSimpleTextUI.a

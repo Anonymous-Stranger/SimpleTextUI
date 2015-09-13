@@ -31,11 +31,15 @@ input.h
 ../include/_test.h
 Menu.h
 ../include/Menu.h
+input.h
+../include/input.h
 
 ../include/input.h
 functional
 -
 limits
+-
+string
 -
 IOObj.h
 ../include/IOObj.h

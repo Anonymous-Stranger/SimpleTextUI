@@ -58,6 +58,7 @@ private:
 
 template<typename T>
 inline IOObj& operator<<(IOObj& io, T output) {
+	io.out().clear();
 	io.out() << output;
 	if (io.out().fail()) throw OutputFailedError{};
 	if (io.out().bad()) throw OutputBrokenError{};
@@ -65,6 +66,7 @@ inline IOObj& operator<<(IOObj& io, T output) {
 }
 
 inline IOObj& operator<<(IOObj& io, std::ostream& (*manip) (std::ostream&) ) {
+	io.out().clear();
 	io.out() << manip;
 	if (io.out().fail()) throw OutputFailedError{};
 	if (io.out().bad()) throw OutputBrokenError{};
@@ -73,6 +75,7 @@ inline IOObj& operator<<(IOObj& io, std::ostream& (*manip) (std::ostream&) ) {
 
 template<typename T>
 inline IOObj& operator>>(IOObj& io, T& input) {
+	io.in().clear();
 	io.in() >> input;
 	if (io.in().fail()) throw InputFailedError{};
 	if (io.in().bad()) throw InputBrokenError{};

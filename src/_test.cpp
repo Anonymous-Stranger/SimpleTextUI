@@ -11,9 +11,17 @@ namespace SimpleTextUITest {
 
 void run() {
 
-	SimpleTextUI::Menu menu {{
-		{"blah", [](SimpleTextUI::IOObj& io){
-			io << (yesOrNo(io, "Are you sure?", false) ? "Good." : "Nevermind.") << std::endl;
+	Menu menu {{
+		{"blah", [](IOObj& io){
+			
+			io << std::endl;
+
+			io << (yesOrNo(io, "Are you sure?", false) ? "Good." : "Nevermind.");
+
+			io << std::endl << std::endl;
+
+			input<std::string>(io, "type 'hello': ", [](std::string s){ return s == "hello"; });
+
 		}}
 	}};
 

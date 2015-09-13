@@ -9,8 +9,11 @@
 #define SIMPLE_TEXT_UI_TEST_H_
 
 #include "Menu.h"
+#include "input.h"
 
 namespace SimpleTextUITest {
+	using namespace SimpleTextUI;
+
 	void run();
 }
 

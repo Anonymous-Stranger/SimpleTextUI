@@ -14,6 +14,37 @@ namespace SimpleTextUI {
 		in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
 
+	std::string inputStr(
+		IOObj& io,
+		std::string message,
+		std::function<bool(std::string)> isValid,
+		bool trim
+	) {
+
+		std::string whitespaces {" \f\n\r\t\v"};
+		std::string str;
+
+		for (;;) { // loop broken by break statement
+
+			io.in().clear();
+
+			io << message;
+
+			std::getline(io.in(), str);
+
+			if (io.in().fail()) continue;
+			if (io.in().bad()) throw OutputBrokenError();
+
+			if (trim) str = str.substr(str.find_first_not_of(whitespaces), str.find_last_not_of(whitespaces)+1);
+
+			if (isValid(str)) break;
+
+		}
+
+		return str;
+
+	}
+
 	bool yesOrNo(IOObj& io, std::string message) {
 		for(;;) { // exited in switch
 

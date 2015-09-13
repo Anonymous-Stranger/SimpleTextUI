@@ -10,6 +10,7 @@
 
 #include <functional>
 #include <limits>
+#include <string>
 #include "IOObj.h"
 
 namespace SimpleTextUI {
@@ -37,6 +38,26 @@ namespace SimpleTextUI {
         } while (failed || !isValid(obj));
 
         return obj;
+    }
+
+    std::string inputStr(
+        IOObj& io,
+        std::string message,
+        std::function<bool(std::string)> isValid=[](std::string){ return true; },
+        bool trim=true
+    );
+
+    inline std::string inputStr(IOObj& io, std::string message, bool trim) {
+        return inputStr(io, message, [](std::string){ return true; }, trim);
+    }
+
+    template<>
+    inline std::string input<std::string>(
+        IOObj& io,
+        std::string message,
+        std::function<bool(std::string)> isValid
+    ) {
+       return inputStr(io, message, isValid); 
     }
 
 	bool yesOrNo(IOObj& io, std::string message);

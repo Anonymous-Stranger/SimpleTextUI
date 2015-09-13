@@ -1,6 +1,9 @@
 /*
  * menu.h
  *
+ * A class to display a menu in front of the user, and call a function based on their selection.
+ * See _test.cpp for a demo of how to use Menu.
+ * 
  *  Created on: Aug 17, 2015
  *      Author: Akash
  */
@@ -34,7 +37,7 @@ public:
 
 	~Menu() { releaseIO(); }
 
-	void choose();
+	void choose(); // displays the menu, and runs the function corresponding to the user's selection
 
 	const std::string& getTitle() const { return title; }
 	void setTitle(std::string title) { this->title = title; }
@@ -56,8 +59,9 @@ protected:
 	Menu(Menu&&)=default;
 	Menu& operator=(Menu&&)=default;
 
-	void printTitle();
-	void printItem(const std::string title, const int count);
+	virtual void printTitle();
+	virtual void printItem(const std::string title, const int count);
+
 private:
 	const static std::string showMenuTitle;
 	const static std::string chooseMessage;

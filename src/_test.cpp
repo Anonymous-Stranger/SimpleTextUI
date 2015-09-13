@@ -1,6 +1,8 @@
 /*
  * _test.cpp
  *
+ * Tests SimpleTextUI.
+ * 
  *  Created on: Aug 17, 2015
  *      Author: Akash
  */

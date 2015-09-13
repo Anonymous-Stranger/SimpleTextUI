@@ -1,6 +1,8 @@
 /*
  * _test.h
  *
+ * Tests SimpleTextUI.
+ *
  *  Created on: Aug 18, 2015
  *      Author: Akash
  */

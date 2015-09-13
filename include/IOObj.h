@@ -1,6 +1,8 @@
 /*
  * IOObj.h
  *
+ * A class to combine input and output into one object.
+ *
  *  Created on: Aug 17, 2015
  *      Author: Akash
  */
@@ -35,7 +37,7 @@ public:
 	void setOutput(std::ostream* out);
 	void setOutput(std::ostream& out);
 
-	void outputSeparator() { *o << "-------------------------------" << std::endl; }
+	void outputSeparator() { *o << "-------------------------------" << std::endl; } // outputs a separator
 
 protected:
 	IOObj(IOObj&&)=default;

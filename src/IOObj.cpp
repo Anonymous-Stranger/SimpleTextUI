@@ -1,6 +1,8 @@
 /*
  * IOObj.cpp
  *
+ * A class to combine input and output into one object.
+ * 
  *  Created on: Aug 17, 2015
  *      Author: Akash
  */

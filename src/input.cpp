@@ -10,6 +10,7 @@
 namespace SimpleTextUI {
 
 	void ignoreInputToNewline(std::istream& in) {
+	/* Ignores the rest of the input, so that the next input operation starts off on a blank slate. */
         in.clear();
 		in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
@@ -20,6 +21,7 @@ namespace SimpleTextUI {
 		std::function<bool(std::string)> isValid,
 		bool trim
 	) {
+	/* Handles the special case of inputting to a string. */
 
 		std::string whitespaces {" \f\n\r\t\v"};
 		std::string str;
@@ -42,10 +44,10 @@ namespace SimpleTextUI {
 		}
 
 		return str;
-
 	}
 
 	bool yesOrNo(IOObj& io, std::string message) {
+	/* Asks a yes or no question without a default value. */
 		for(;;) { // exited in switch
 
 			io << message << " (y/n): ";
@@ -65,6 +67,7 @@ namespace SimpleTextUI {
 	}
 
 	bool yesOrNo(IOObj& io, std::string message, bool defaultVal) {
+	/* Asks a yes or no question with a default value. */
 
 		for(;;) { // exited in switch
 

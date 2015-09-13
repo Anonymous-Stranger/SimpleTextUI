@@ -1,5 +1,5 @@
 /*
- * SimpleTextUIErrors.h
+ * Errors.h
  *
  *  Created on: Aug 19, 2015
  *      Author: Akash

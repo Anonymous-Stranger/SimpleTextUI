@@ -38,7 +38,7 @@ namespace SimpleTextUI {
 		if (choice == 0) return choose();
 
 		// otherwise run the function corresponding to the choice
-		else items[choice-defaultItems].second(*io);
+		items[choice-defaultItems].second(*io);
 
 		return choice;
 

@@ -15,8 +15,9 @@ namespace SimpleTextUI {
 	const std::string Menu::showMenuTitle {"Display Menu"};
 	const std::string Menu::chooseMessage {"Choose one: "};
 
-	void Menu::choose() {
-	/* Displays the menu, and runs the function corresponding to the user's selection. */
+	int Menu::choose() {
+	/* Displays the menu, and runs the function corresponding to the user's selection. 
+	 * Returns the index corresponding with the choice. */
 
 		printTitle();
 
@@ -34,10 +35,12 @@ namespace SimpleTextUI {
 		*io << std::endl;
 
 		// if choice is a default item, perform relevant action
-		if (choice == 0) choose();
+		if (choice == 0) return choose();
 
 		// otherwise run the function corresponding to the choice
 		else items[choice-defaultItems].second(*io);
+
+		return choice;
 
 	}
 

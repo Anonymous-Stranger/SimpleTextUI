@@ -24,6 +24,10 @@ void run() {
 
 			input<std::string>(io, "type 'hello': ", [](std::string s){ return s == "hello"; });
 
+			io << std::endl;
+
+			input<unsigned int>(io, "type a four digit positive integer: ", [](unsigned int i){ return 999 < i && i <= 9999; });
+
 		}}
 	}};
 

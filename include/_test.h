@@ -9,8 +9,6 @@
 
 namespace SimpleTextUITest {
 
-    using namespace SimpleTextUI;
-
     void run();
     
     void runSimple();

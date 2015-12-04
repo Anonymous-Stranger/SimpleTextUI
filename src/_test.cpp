@@ -13,6 +13,8 @@
 
 namespace SimpleTextUITest {
 
+using namespace SimpleTextUI;
+
 // helper functions
 void blah(IOObj& io);
 void sayNumber(IOObj& io);

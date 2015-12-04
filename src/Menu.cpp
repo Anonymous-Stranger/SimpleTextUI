@@ -10,6 +10,9 @@
 
 #include "Menu.h"
 
+#include <iomanip>
+#include "input.h"
+
 namespace SimpleTextUI {
 
 	const std::string Menu::showMenuTitle {"Display Menu"};

@@ -13,9 +13,7 @@
 
 #include <functional>
 #include <vector>
-#include <iomanip>
 #include "IOObj.h"
-#include "input.h"
 
 namespace SimpleTextUI {
 
@@ -26,6 +24,7 @@ public:
 	using MenuItem = std::pair<std::string, MenuItemFunc>;
 
 	Menu(std::vector<MenuItem> items={}): Menu(new IOObj{}, items) {}
+	Menu(std::string title): Menu(new IOObj{}, {}, title) {}
 	Menu(std::vector<MenuItem> items, std::string title): Menu(new IOObj{}, items, title) {}
 	Menu(IOObj* io, std::vector<MenuItem> items={}): Menu(io, true, items) {}
 	Menu(IOObj& io, std::vector<MenuItem> items={}): Menu(&io, false, items) {}
@@ -37,14 +36,14 @@ public:
 
 	~Menu() { releaseIO(); }
 
-	int choose(); // displays the menu, and runs the function corresponding to the user's selection
+	int choose(); // displays the menu, and runs the index corresponding to the user's selection
 
 	const std::string& getTitle() const { return title; }
 	void setTitle(std::string title) { this->title = title; }
 
 	const std::vector<MenuItem>& getItems() const { return items; }
 	void setItems(const std::vector<MenuItem>& items) { this->items = items; }
-	void addItem(std::string s, MenuItemFunc f={}) { items.push_back({s, f}); }
+	void addItem(std::string s, MenuItemFunc f=[](IOObj&){}) { items.push_back({s, f}); }
 	void clearItems() { items.clear(); }
 
 	IOObj& getIOObj() { return *io; } // intentionally modifiable

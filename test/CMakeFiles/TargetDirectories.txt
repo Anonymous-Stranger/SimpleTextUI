@@ -1,1 +1,0 @@
-/home/akash/Documents/programming/c++/_SimpleTextUI/test/CMakeFiles/SimpleTextUITest.dir

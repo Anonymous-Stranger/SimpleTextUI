@@ -37,7 +37,8 @@ namespace SimpleTextUI {
 			if (io.in().fail()) continue;
 			if (io.in().bad()) throw OutputBrokenError();
 
-			if (trim) str = str.substr(str.find_first_not_of(whitespaces), str.find_last_not_of(whitespaces)+1);
+			if (!str.empty() && trim)
+				str = str.substr(str.find_first_not_of(whitespaces), str.find_last_not_of(whitespaces)+1);
 
 			if (isValid(str)) break;
 

@@ -17,3 +17,9 @@ add_library(SimpleTextUI STATIC
 	../src/input.cpp
 	../src/Menu.cpp
 )
+
+add_executable(SimpleTextUITest
+    ../src/_runtest.cpp
+)
+
+target_link_libraries(SimpleTextUITest SimpleTextUI)

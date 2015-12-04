@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11    CMakeFiles/SimpleTextUITest.dir/home/akash/Documents/programming/c++/_SimpleTextUI/src/_runtest.cpp.o  -o /home/akash/Documents/programming/c++/_SimpleTextUI/bin/SimpleTextUITest -rdynamic /home/akash/Documents/programming/c++/_SimpleTextUI/bin/libSimpleTextUI.a 

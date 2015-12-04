@@ -2,21 +2,25 @@
  * _test.h
  *
  * Tests SimpleTextUI.
- *
- *  Created on: Aug 18, 2015
+ * 
+ *  Created on: Aug 17, 2015
  *      Author: Akash
  */
 
-#ifndef SIMPLE_TEXT_UI_TEST_H_
-#define SIMPLE_TEXT_UI_TEST_H_
-
-#include "Menu.h"
-#include "input.h"
-
 namespace SimpleTextUITest {
-	using namespace SimpleTextUI;
 
-	void run();
+    using namespace SimpleTextUI;
+
+    void run();
+    
+    void runSimple();
+    void runCompressed();
+    // both functions do the same thing.
+    
+    // these are versions of runSimple and runCompressed that use lambdas instead of helper functions.
+    void runSimpleLambdas();
+    void runCompressedLambdas();
+
 }
 
-#endif /* TEST_H_ */
+

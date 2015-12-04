@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11    CMakeFiles/SimpleTextUITest.dir/main.cpp.o  -o SimpleTextUITest  -L../bin -rdynamic -lSimpleTextUI -Wl,-rpath,../bin 
